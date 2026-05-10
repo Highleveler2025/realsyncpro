@@ -171,8 +171,6 @@ function Hero() {
   const [sys, setSys] = useState(47)
   const [rev, setRev] = useState(2)
   const [speed, setSpeed] = useState(60)
-  const [sysRef] = useCounter(47, 2200)
-  const [revRef] = useCounter(2, 2400)
 
   useEffect(() => { setSys(47) }, [])
 
@@ -199,7 +197,6 @@ function Hero() {
         </div>
 
         {/* social proof counters */}
-        <div ref={sysRef} style={{ display:'flex',gap:'3rem',justifyContent:'center',marginTop:'4rem',flexWrap:'wrap' }}>
           {[
             { val:'47+', label:'Systems Built' },
             { val:'$2M+', label:'Revenue Recovered' },
